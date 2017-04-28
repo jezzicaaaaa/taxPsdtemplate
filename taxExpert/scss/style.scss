@@ -147,7 +147,7 @@ nav{
     }
     button{
         text-transform: uppercase;
-        padding: 20px 35px;
+        padding: 15px 30px;
         font-family: "Ubuntu", Helvetica, Arial, sans-serif;
         letter-spacing: 0.05em;
         font-size: 14px;
@@ -189,5 +189,128 @@ nav{
         font-weight: 400;
         margin-top: 1%;
         letter-spacing: 0.01em;
+    }
+    .services-of{
+        margin-top: 5vh;
+        display: flex;
+        justify-content: space-between;
+
+        .box{ 
+           border: 1px solid #BDBDBD;
+           padding: 50px 30px;
+           margin: 3% 5%;
+           
+           i{
+               color: #8BC03F;
+               font-size: 2.5em;
+           }
+           .title{
+               font-weight: 800;
+               font-size: 1.20em;
+               color: black;
+               transition: .3s ease-in-out;
+           }
+           .divider{
+                content: " ";
+                height: 2px;
+                font-size: 14px;
+                line-height: 1.71429;
+                font-weight: 400;
+                color: #8BC03F;
+           }
+           p{
+               font-weight: 350;
+               line-height: 1.7;
+               font-size: 0.9em;
+               color: #BDBDBD;
+           }
+           .title:hover{
+               color: #8BC03F;
+               cursor: pointer;
+           }
+        }
+    }
+}
+.about{
+    height: 70vh;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    background: url(../assets/counts.jpg) no-repeat; 
+    background-size: cover;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+
+    
+    .about-us{
+        background-color: #1E3953;
+        width: 30%;
+        padding: 0.5% 5% 5% 4%;
+        -webkit-box-shadow: -5px -1px 5px 5px rgba(0,0,0,0.1);
+        -moz-box-shadow: -5px -1px 5px 5px rgba(0,0,0,0.1);
+        box-shadow: -5px -1px 5px 5px rgba(0,0,0,0.1);    
+        margin-top: 5em;
+        margin-left: auto;
+
+
+        .a-title{
+            font-size: 45px;
+            font-weight: 700;
+        }
+        .a-desc{
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 1.71429;
+
+        }
+        .check{
+                font-family: "Open Sans", Helvetica, Arial, sans-serif;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 3;
+            i{
+                color: #8BC03F;
+                margin-right: 0.5em;
+            }
+        }
+        button{
+            text-transform: uppercase;
+            padding: 15px 30px;
+            font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+            letter-spacing: 0.05em;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 5px;
+            border: 2px solid;
+            color: #fff;
+            background-color: transparent;
+            border-color: #fff;
+            margin-top: 5%;
+            transition: .3s ease-out;
+        }
+        button:hover{
+            background-color: #8BC03F;
+            border-color: #8BC03F;
+            cursor: pointer;
+        }
+    }
+    .counts{
+        background-color: #1E3953;
+        display: flex;
+        width: 10%;
+        margin-right:auto;
+
+        .num-box{
+            display: flex;
+            flex-direction: column;
+
+            .number{
+                font-size: 50px;
+                font-weight: 800;
+            }
+            .details{
+                color: #486889;
+            }
+        }
     }
 }

@@ -122,7 +122,7 @@ nav {
     margin-top: 0; }
   .home button {
     text-transform: uppercase;
-    padding: 20px 35px;
+    padding: 15px 30px;
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     letter-spacing: 0.05em;
     font-size: 14px;
@@ -157,3 +157,113 @@ nav {
     font-weight: 400;
     margin-top: 1%;
     letter-spacing: 0.01em; }
+  .services .services-of {
+    margin-top: 5vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .services .services-of .box {
+      border: 1px solid #BDBDBD;
+      padding: 50px 30px;
+      margin: 3% 5%; }
+      .services .services-of .box i {
+        color: #8BC03F;
+        font-size: 2.5em; }
+      .services .services-of .box .title {
+        font-weight: 800;
+        font-size: 1.20em;
+        color: black;
+        transition: .3s ease-in-out; }
+      .services .services-of .box .divider {
+        content: " ";
+        height: 2px;
+        font-size: 14px;
+        line-height: 1.71429;
+        font-weight: 400;
+        color: #8BC03F; }
+      .services .services-of .box p {
+        font-weight: 350;
+        line-height: 1.7;
+        font-size: 0.9em;
+        color: #BDBDBD; }
+      .services .services-of .box .title:hover {
+        color: #8BC03F;
+        cursor: pointer; }
+
+.about {
+  height: 70vh;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  background: url(../assets/counts.jpg) no-repeat;
+  background-size: cover;
+  color: #FFFFFF;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  .about .about-us {
+    background-color: #1E3953;
+    width: 30%;
+    padding: 0.5% 5% 5% 4%;
+    -webkit-box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 5em;
+    margin-left: auto; }
+    .about .about-us .a-title {
+      font-size: 45px;
+      font-weight: 700; }
+    .about .about-us .a-desc {
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.71429; }
+    .about .about-us .check {
+      font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 3; }
+      .about .about-us .check i {
+        color: #8BC03F;
+        margin-right: 0.5em; }
+    .about .about-us button {
+      text-transform: uppercase;
+      padding: 15px 30px;
+      font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+      letter-spacing: 0.05em;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 5px;
+      border: 2px solid;
+      color: #fff;
+      background-color: transparent;
+      border-color: #fff;
+      margin-top: 5%;
+      transition: .3s ease-out; }
+    .about .about-us button:hover {
+      background-color: #8BC03F;
+      border-color: #8BC03F;
+      cursor: pointer; }
+  .about .counts {
+    background-color: #1E3953;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 10%;
+    margin-right: auto; }
+    .about .counts .num-box {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .about .counts .num-box .number {
+        font-size: 50px;
+        font-weight: 800; }
+      .about .counts .num-box .details {
+        color: #486889; }
