@@ -1,0 +1,193 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    max-width: 1280px;
+    margin: auto;
+
+}
+
+header{
+    background-color: #1E3953;
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    .wrapper{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .details{
+            margin-left: 0;
+            padding-left: 0;
+
+
+            li{
+                display: inline;
+                color: #E6E9EC;
+                margin-right: 4em;
+                transition: 0.3s ease-in-out; 
+
+                    i{
+                        color:#8BC03F;
+                        margin-right: 0.5em; 
+                        font-size: 1.2em;
+                    }
+            }
+            li:hover{
+                color: #8795A3;
+                cursor: pointer;
+            }
+            #time:hover{
+                color: #E6E9EC;
+                cursor: text;
+            
+            }
+        }
+        .icons{
+            margin-right: 0;
+            padding-right: 0;
+
+
+            li{
+                display: inline;
+                color: #FFFFFF;
+                background-color: #2E5275;
+                border-radius: 3px;
+                padding: 5px 10px;
+                margin: 1.5%;
+                font-size: 1em;
+                box-sizing: border-box;
+                transition: 0.3s ease-in-out;
+            }
+            li:hover{
+                background-color: #8BC03F;
+                cursor: pointer;
+                
+            }
+        }
+    }
+}
+nav{
+    height: 6em;
+    display: flex;
+    text-transform: uppercase;
+    font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
+    letter-spacing: .02em;
+    
+    .wrapper{
+        justify-content: flex-end;
+    
+
+    ul{
+        justify-content: flex-end;
+
+        li{
+            display: inline;
+            list-style: none;
+            margin: 3.5%;
+            transition: .3s ease-in-out;
+            
+            i{
+                margin-left: 0.35em;
+                color: #8BC03F;
+                font-size: 18px;
+            }
+        }
+        #home{
+            color: #8BC03F;
+        }
+        #search{
+            i{
+                font-weight: 100;
+                color: black;
+                font-size: 18px;
+                margin-left: 0;
+            }
+            i:hover{
+                color: #8BC03F;
+                transition: .3s ease-in-out;
+            }
+        }
+        li:hover{
+            color: #8BC03F;
+            cursor: pointer;
+        }
+        }
+    }
+
+}
+.home{
+    background-image: url(../assets/home.jpg);
+    background-position: cover;
+    height: 70vh;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    color: #FFFFFF;
+
+
+    h1{
+        font-size: 60px;
+        line-height: 1.4;
+        letter-spacing: .025em;
+        padding-top: 2.5em;
+        padding-left: 0;
+        margin: 0;
+        font-weight: 900;
+    }
+    h3{
+        font-size: 22px;
+        font-weight: 300;
+        line-height: 1.71429;
+        margin-top: 0;
+    }
+    button{
+        text-transform: uppercase;
+        padding: 20px 35px;
+        font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+        letter-spacing: 0.05em;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 5px;
+        border: 2px solid;
+        color: #fff;
+        background-color: #1e3953;
+        border-color: #1e3953;
+        margin-top: 5%;
+        transition: .3s ease-out;
+        
+        i{
+            margin-left: 0.2em;
+            font-size: 20px;
+        }
+    }
+    button:hover{
+        background-color: #8BC03F;
+        border-color: #8BC03F;
+        cursor: pointer;
+    }
+}
+.services{
+    margin: 7vh;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    text-align: center;
+    
+    
+    h1{
+        font-size: 45px;
+        font-weight: 900;
+        margin: auto;
+    }
+    h5{
+        color: #BDBDBD;
+        margin: auto;
+        font-size: 1.1em;
+        font-weight: 400;
+        margin-top: 1%;
+        letter-spacing: 0.01em;
+    }
+}
