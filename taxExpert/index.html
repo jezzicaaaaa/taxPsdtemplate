@@ -27,25 +27,32 @@
     </header>
     <nav>
         <div class="wrapper">
-            <ul>
-                <li id="home">home</li>
-                <li>about us</li>
-                <li>services</li>
-                <li>blog<i class="fa fa-angle-down" aria-hidden="true"></i></li>
-                <li>pages<i class="fa fa-angle-down" aria-hidden="true"></i></li>
-                <li>contacts</li>
-                <li id="search"><i class="fa fa-search" aria-hidden="true"></i></li>
-            </ul>
+            <a href="#home" id="home-btn">home</a>
+            <a href="#about">about us</a>
+            <a href="#services">services</a>
+            <div class="blog">
+                <button class="blog-btn">blog<i class="fa fa-angle-down" aria-hidden="true"></i></button>
+                <div class="blog-content">
+                    <a href="#">Classic blog</a>
+                    <a href="#">Grid blog</a>
+                    <a href="#">Blog line</a>
+                    <a href="#">Masonry blog</a>
+                    <a href="#">Blog post</a>
+                </div>
+            </div>
+            <div class="pages">pages<i class="fa fa-angle-down" aria-hidden="true"></i></div>
+            <a href="#contacts">contacts</a>
+            <a id="search"><i class="fa fa-search" aria-hidden="true"></i></a>
         </div>
     </nav>
-    <section class="home">
+    <section id="home">
         <div class="wrapper">
             <h1>Our Clients Don't <br>Have Tax Problems</h1>
             <h3>Optimize tax costs using our years of experience</h3>
             <button type="button">make an appointment <i class="fa fa-angle-right" aria-hidden="true"></i></button>
         </div>
     </section>
-    <section class="services">
+    <section id="services">
         <div class="wrapper">
             <h1>Our Services</h1>
             <h5>We provide expert tax and advisory services to individuals and small businesses.</h5>
@@ -71,7 +78,7 @@
             </div>
         </div>
     </section>
-    <section class="about">
+    <section id="about">
         <div class="wrapper">
             <div class="about-us">
                 <p class="a-title">About Us</p>
@@ -100,4 +107,4 @@
 </body>
 <script src="https://use.fontawesome.com/a6dab44087.js"></script>
 
-</html>
+</html>309

@@ -6,6 +6,10 @@ body {
   max-width: 1280px;
   margin: auto; }
 
+a {
+  text-decoration: none;
+  color: black; }
+
 header {
   background-color: #1E3953;
   font-family: Ubuntu, Helvetica, Arial, sans-serif;
@@ -65,13 +69,16 @@ header {
         cursor: pointer; }
 
 nav {
-  height: 4rem;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  height: 70px;
   text-transform: uppercase;
   font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
-  letter-spacing: .02em; }
+  letter-spacing: .02em;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  background: white;
+  top: 0;
+  border-bottom: 1px solid #BDBDBD; }
   nav .wrapper {
     width: 98%;
     display: -webkit-flex;
@@ -79,48 +86,84 @@ nav {
     display: flex;
     -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
-    justify-content: flex-end;
-    padding-right: 0;
-    margin-right: 0; }
-    nav .wrapper ul {
-      display: inline-block;
+    justify-content: flex-end; }
+    nav .wrapper a {
+      display: inline;
+      width: 100px;
       margin: 0;
       padding: 0;
-      width: 70%; }
-      nav .wrapper ul li {
-        display: inline;
-        list-style: none;
-        margin: 3.5%;
-        transition: .3s ease-in-out; }
-        nav .wrapper ul li i {
-          margin-left: 0.35em;
-          color: #8BC03F;
-          font-size: 18px; }
-      nav .wrapper ul #home {
-        color: #8BC03F; }
-      nav .wrapper ul #search i {
+      transition: .3s ease-in-out; }
+      nav .wrapper a i {
+        margin-left: 0.35em;
+        color: #8BC03F;
+        font-size: 18px; }
+      nav .wrapper a #search i {
         font-weight: 100;
         color: black;
         font-size: 18px;
         display: inline-block;
         margin-right: 0;
         padding-right: 0; }
-      nav .wrapper ul #search i:hover {
+      nav .wrapper a #search i:hover {
         color: #8BC03F;
         transition: .3s ease-in-out; }
-      nav .wrapper ul li:hover {
+      nav .wrapper a li:hover {
         color: #8BC03F;
         cursor: pointer; }
+    nav .wrapper a:hover {
+      color: #8BC03F;
+      cursor: pointer; }
+    nav .wrapper #home-btn {
+      color: #8BC03F; }
+    nav .wrapper .blog {
+      display: inline;
+      width: 100px;
+      margin: 0;
+      padding: 0;
+      transition: .3s ease-in-out;
+      position: relative; }
+      nav .wrapper .blog button {
+        text-transform: uppercase;
+        border: none;
+        background: none;
+        font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
+        letter-spacing: .02em; }
+        nav .wrapper .blog button i {
+          margin-left: 0.35em;
+          color: #8BC03F;
+          font-size: 18px; }
+      nav .wrapper .blog .blog-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 200px;
+        z-index: 99999; }
+        nav .wrapper .blog .blog-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left; }
+        nav .wrapper .blog .blog-content a:hover {
+          background-color: #ddd; }
+    nav .wrapper .blog:hover .blog-content {
+      display: block; }
+    nav .wrapper .pages {
+      display: inline;
+      width: 100px;
+      margin: 0;
+      padding: 0;
+      transition: .3s ease-in-out; }
 
-.home {
+#home {
   background-image: url(../assets/home.jpg);
   background-position: cover;
   height: 70vh;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   color: #FFFFFF; }
-  .home .wrapper {
+  #home .wrapper {
     width: 98%; }
-    .home .wrapper h1 {
+    #home .wrapper h1 {
       font-size: 60px;
       line-height: 1.4;
       letter-spacing: .025em;
@@ -128,12 +171,12 @@ nav {
       padding-left: 0;
       margin: 0;
       font-weight: 900; }
-    .home .wrapper h3 {
+    #home .wrapper h3 {
       font-size: 22px;
       font-weight: 300;
       line-height: 1.71429;
       margin-top: 0; }
-    .home .wrapper button {
+    #home .wrapper button {
       text-transform: uppercase;
       padding: 15px 30px;
       font-family: "Ubuntu", Helvetica, Arial, sans-serif;
@@ -147,32 +190,32 @@ nav {
       border-color: #1e3953;
       margin-top: 5%;
       transition: .3s ease-out; }
-      .home .wrapper button i {
+      #home .wrapper button i {
         margin-left: 0.2em;
         font-size: 20px; }
-    .home .wrapper button:hover {
+    #home .wrapper button:hover {
       background-color: #8BC03F;
       border-color: #8BC03F;
       cursor: pointer; }
 
-.services {
+#services {
   margin-top: 7vh;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   text-align: center; }
-  .services .wrapper {
+  #services .wrapper {
     width: 98%; }
-    .services .wrapper h1 {
+    #services .wrapper h1 {
       font-size: 45px;
       font-weight: 900;
       margin: auto; }
-    .services .wrapper h5 {
+    #services .wrapper h5 {
       color: #BDBDBD;
       margin: auto;
       font-size: 1.1em;
       font-weight: 400;
       margin-top: 1%;
       letter-spacing: 0.01em; }
-    .services .wrapper .services-of {
+    #services .wrapper .services-of {
       margin-top: 50px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -180,22 +223,26 @@ nav {
       -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
       justify-content: space-between; }
-      .services .wrapper .services-of .box {
+      #services .wrapper .services-of .box {
         border: 1px solid #BDBDBD;
-        padding: 30px 60px;
+        padding: 90px 60px;
         margin: 3%;
         text-align: center;
-        display: inline-block; }
-        .services .wrapper .services-of .box i {
+        display: inline-block;
+        height: 180px;
+        width: 230px; }
+        #services .wrapper .services-of .box i {
           color: #8BC03F;
-          font-size: 2.5em; }
-        .services .wrapper .services-of .box .title {
+          font-size: 2.5em;
+          margin-bottom: 5px;
+          transition: .3s ease-in-out; }
+        #services .wrapper .services-of .box .title {
           font-weight: 800;
           font-size: 1.20em;
           color: black;
-          transition: .3s ease-in-out;
+          transition: .4s ease-in-out;
           margin-bottom: 0; }
-        .services .wrapper .services-of .box .divider {
+        #services .wrapper .services-of .box .divider {
           -webkit-justify-content: center;
           -ms-flex-pack: center;
           justify-content: center;
@@ -204,21 +251,23 @@ nav {
           margin: 10px auto;
           background: #8BC03F;
           transition: .3s ease-in-out; }
-        .services .wrapper .services-of .box:hover .divider {
+        #services .wrapper .services-of .box:hover .divider {
           width: 180px;
           position: relative;
-          margin: 20px auto; }
-        .services .wrapper .services-of .box p {
+          margin: 30px auto; }
+        #services .wrapper .services-of .box:hover i {
+          margin-top: -20px; }
+        #services .wrapper .services-of .box p {
           font-weight: 350;
           margin: 0;
           line-height: 1.7;
           font-size: 0.9em;
           color: #BDBDBD; }
-        .services .wrapper .services-of .box .title:hover {
+        #services .wrapper .services-of .box .title:hover {
           color: #8BC03F;
           cursor: pointer; }
 
-.about {
+#about {
   height: 70vh;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   background: url(../assets/counts.jpg) no-repeat;
@@ -230,9 +279,9 @@ nav {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  .about .wrapper {
+  #about .wrapper {
     width: 98%; }
-    .about .wrapper .about-us {
+    #about .wrapper .about-us {
       background-color: #1E3953;
       width: 30%;
       padding: 0.5% 5% 5% 4%;
@@ -241,23 +290,23 @@ nav {
       box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
       margin-top: 5em;
       margin-left: auto; }
-      .about .wrapper .about-us .a-title {
+      #about .wrapper .about-us .a-title {
         font-size: 45px;
         font-weight: 700; }
-      .about .wrapper .about-us .a-desc {
+      #about .wrapper .about-us .a-desc {
         font-family: "Open Sans", Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 14px;
         line-height: 1.71429; }
-      .about .wrapper .about-us .check {
+      #about .wrapper .about-us .check {
         font-family: "Open Sans", Helvetica, Arial, sans-serif;
         font-weight: 400;
         font-size: 14px;
         line-height: 3; }
-        .about .wrapper .about-us .check i {
+        #about .wrapper .about-us .check i {
           color: #8BC03F;
           margin-right: 0.5em; }
-      .about .wrapper .about-us button {
+      #about .wrapper .about-us button {
         text-transform: uppercase;
         padding: 15px 30px;
         font-family: "Ubuntu", Helvetica, Arial, sans-serif;
@@ -271,28 +320,28 @@ nav {
         border-color: #fff;
         margin-top: 5%;
         transition: .3s ease-out; }
-      .about .wrapper .about-us button:hover {
+      #about .wrapper .about-us button:hover {
         background-color: #8BC03F;
         border-color: #8BC03F;
         cursor: pointer; }
-    .about .wrapper .counts {
+    #about .wrapper .counts {
       background-color: #1E3953;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       width: 10%;
       margin-right: auto; }
-      .about .wrapper .counts .num-box {
+      #about .wrapper .counts .num-box {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
         -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column; }
-        .about .wrapper .counts .num-box .number {
+        #about .wrapper .counts .num-box .number {
           font-size: 50px;
           font-weight: 800; }
-        .about .wrapper .counts .num-box .details {
+        #about .wrapper .counts .num-box .details {
           color: #486889; }
 
 @media (max-width: 1100px) {

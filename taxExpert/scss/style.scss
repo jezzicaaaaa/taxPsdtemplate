@@ -8,6 +8,11 @@ body{
 
 }
 
+a{
+    text-decoration: none;
+    color: black;
+}
+
 header{
     background-color: #1E3953;
     font-family: Ubuntu, Helvetica, Arial, sans-serif;
@@ -76,41 +81,36 @@ header{
     }
 }
 nav{
-    height: 4rem;
-    display: flex;
+    height: 70px;
     text-transform: uppercase;
     font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
     letter-spacing: .02em;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    background: white;
+    top: 0;
+    border-bottom: 1px solid #BDBDBD;
+
     
     .wrapper{
         width: 98%;
-        display:flex;
+        display: flex;
         justify-content: flex-end;
-        padding-right: 0;
-        margin-right: 0;
 
-        ul{
-            display: inline-block;
-            margin: 0;
+        a{
+            display: inline;
+            width: 100px;
+            margin:0;
             padding: 0;
-            width: 70%;
-
-
-            li{
-                display: inline;
-                list-style: none;
-                margin: 3.5%;
-                transition: .3s ease-in-out;
-                
-                i{
-                    margin-left: 0.35em;
-                    color: #8BC03F;
-                    font-size: 18px;
-                }
-            }
-            #home{
+            transition: .3s ease-in-out;
+            
+            i{
+                margin-left: 0.35em;
                 color: #8BC03F;
+                font-size: 18px;
             }
+
             #search{
                 i{
                     font-weight: 100;
@@ -126,15 +126,75 @@ nav{
                     transition: .3s ease-in-out;
                 }
             }
+            
             li:hover{
                 color: #8BC03F;
                 cursor: pointer;
             }
         }
-    }
+        a:hover{
+            color: #8BC03F;
+            cursor: pointer;
+        }
 
+        #home-btn{
+                color: #8BC03F;
+            }
+        .blog{
+            display: inline;
+            width: 100px;
+            margin:0;
+            padding: 0;
+            transition: .3s ease-in-out;
+            position: relative;
+            
+            button{
+                text-transform: uppercase;
+                border: none;
+                background: none;
+                font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
+                letter-spacing: .02em;
+
+                i{
+                    margin-left: 0.35em;
+                    color: #8BC03F;
+                    font-size: 18px;
+                }
+            }
+
+            .blog-content{
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 200px;
+                z-index: 99999;
+
+                a{
+                    color: black;
+                    padding: 12px 16px;
+                    text-decoration: none;
+                    display: block;
+                    text-align: left; 
+                }
+                a:hover{
+                    background-color: #ddd;
+                }
+            }
+            
+        }
+        .blog:hover .blog-content{
+                display: block;
+            }
+        .pages{
+            display: inline;
+            width: 100px;
+            margin:0;
+            padding: 0;
+            transition: .3s ease-in-out;
+        }
+    }
 }
-.home{
+#home{
     background-image: url(../assets/home.jpg);
     background-position: cover;
     height: 70vh;
@@ -186,7 +246,7 @@ nav{
         }
     }
 }
-.services{
+#services{
     margin-top: 7vh;
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     text-align: center;
@@ -214,36 +274,45 @@ nav{
 
             .box{ 
             border: 1px solid #BDBDBD;
-            padding: 30px 60px;
+            padding: 90px 60px;
             margin: 3%;
             text-align: center;
-            display: inline-block;
+            display: inline-block; 
+            height: 180px;
+            width: 230px;
 
                 i{
                     color: #8BC03F;
                     font-size: 2.5em;
+                    margin-bottom: 5px;
+                    transition: .3s ease-in-out;
                 }
                 .title{
                     font-weight: 800;
                     font-size: 1.20em;
                     color: black;
-                    transition: .3s ease-in-out;
+                    transition: .4s ease-in-out;
                     margin-bottom: 0;
+
                 }
                 .divider{
-                        justify-content: center;
-                        width: 60px;
-                        height: 2px;
-                        margin:10px auto;
-                        // border-bottom: 2px solid #8BC03F;
-                        background: #8BC03F;
-                        transition: .3s ease-in-out;
+                    justify-content: center;
+                    width: 60px;
+                    height: 2px;
+                    margin:10px auto;
+                    // border-bottom: 2px solid #8BC03F;
+                    background: #8BC03F;
+                    transition: .3s ease-in-out;
                 }
                 &:hover .divider {
-                        width: 180px;
-                        position: relative;
-                        margin:20px auto;
+                    width: 180px;
+                    position: relative;
+                    margin:30px auto;
                 }
+                &:hover i{
+                    margin-top: -20px;
+                }
+                
                 p{
                     font-weight: 350;
                     margin: 0;
@@ -259,7 +328,7 @@ nav{
         }
     }
 }
-.about{
+#about{
     height: 70vh;
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     background: url(../assets/counts.jpg) no-repeat; 
