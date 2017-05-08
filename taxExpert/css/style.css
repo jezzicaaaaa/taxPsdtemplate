@@ -4,7 +4,8 @@ body {
 
 .wrapper {
   max-width: 1280px;
-  margin: auto; }
+  margin: auto;
+  width: 98%; }
 
 a {
   text-decoration: none;
@@ -27,7 +28,6 @@ header {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 98%;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between; }
@@ -73,14 +73,13 @@ nav {
   text-transform: uppercase;
   font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
   letter-spacing: .02em;
-  position: fixed;
   overflow: hidden;
   width: 100%;
   background: white;
   top: 0;
-  border-bottom: 1px solid #BDBDBD; }
+  border-bottom: 1px solid #BDBDBD;
+  margin: auto; }
   nav .wrapper {
-    width: 98%;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
@@ -90,7 +89,7 @@ nav {
     nav .wrapper a {
       display: inline;
       width: 100px;
-      margin: 0;
+      margin: auto 0;
       padding: 0;
       transition: .3s ease-in-out; }
       nav .wrapper a i {
@@ -199,7 +198,7 @@ nav {
       cursor: pointer; }
 
 #services {
-  margin-top: 7vh;
+  margin-top: 50px;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   text-align: center; }
   #services .wrapper {
@@ -268,28 +267,42 @@ nav {
           cursor: pointer; }
 
 #about {
-  height: 70vh;
+  height: 800px;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
   background: url(../assets/counts.jpg) no-repeat;
   background-size: cover;
   color: #FFFFFF;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  display: flex; }
   #about .wrapper {
-    width: 98%; }
+    width: 98%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
     #about .wrapper .about-us {
       background-color: #1E3953;
-      width: 30%;
+      width: 300px;
       padding: 0.5% 5% 5% 4%;
-      -webkit-box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
-      -moz-box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
-      box-shadow: -5px -1px 5px 5px rgba(0, 0, 0, 0.1);
-      margin-top: 5em;
-      margin-left: auto; }
+      -webkit-box-shadow: 3px -1px 5px 5px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 3px -1px 5px 5px rgba(0, 0, 0, 0.1);
+      box-shadow: 3px -1px 5px 5px rgba(0, 0, 0, 0.1);
+      margin: auto 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-left: auto;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-right: 0;
+      z-index: 1; }
       #about .wrapper .about-us .a-title {
         font-size: 45px;
         font-weight: 700; }
@@ -308,7 +321,7 @@ nav {
           margin-right: 0.5em; }
       #about .wrapper .about-us button {
         text-transform: uppercase;
-        padding: 15px 30px;
+        padding: 20px 20px;
         font-family: "Ubuntu", Helvetica, Arial, sans-serif;
         letter-spacing: 0.05em;
         font-size: 14px;
@@ -319,30 +332,186 @@ nav {
         background-color: transparent;
         border-color: #fff;
         margin-top: 5%;
-        transition: .3s ease-out; }
+        transition: .3s ease-out;
+        width: 240px; }
       #about .wrapper .about-us button:hover {
         background-color: #8BC03F;
         border-color: #8BC03F;
         cursor: pointer; }
     #about .wrapper .counts {
       background-color: #1E3953;
+      margin: auto 0;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      width: 10%;
-      margin-right: auto; }
+      width: 200px;
+      margin-right: auto;
+      height: 450px;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      text-align: center;
+      z-index: 0;
+      -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+      justify-content: flex-end; }
       #about .wrapper .counts .num-box {
+        height: 200px;
+        margin: 0;
+        border-bottom: 1px solid #1C2E3F; }
+        #about .wrapper .counts .num-box .number {
+          font-size: 45px;
+          font-weight: 800;
+          margin-bottom: 0; }
+        #about .wrapper .counts .num-box .details {
+          color: #486889;
+          font-size: 14px;
+          font-weight: 800;
+          margin-top: 0; }
+      #about .wrapper .counts .num-box:nth-child(3) {
+        border-bottom: none; }
+
+#calculator {
+  background: url(../assets/calculator.jpg);
+  background-size: cover;
+  height: 500px;
+  padding: 100px;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif; }
+  #calculator .wrapper {
+    width: 98%; }
+    #calculator .wrapper .title {
+      font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+      margin: 40px;
+      margin-left: 0;
+      font-size: 50px;
+      font-weight: 700; }
+      #calculator .wrapper .title i {
+        color: white; }
+    #calculator .wrapper .cal-container {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row; }
+      #calculator .wrapper .cal-container form {
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column; }
-        #about .wrapper .counts .num-box .number {
-          font-size: 50px;
-          font-weight: 800; }
-        #about .wrapper .counts .num-box .details {
-          color: #486889; }
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: auto; }
+        #calculator .wrapper .cal-container form .left {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 220px;
+          margin-right: 50px; }
+          #calculator .wrapper .cal-container form .left input {
+            border-bottom: 3px solid #8BC03F; }
+        #calculator .wrapper .cal-container form .right {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          width: 220px;
+          flex-direction: column;
+          color: #1C2E3F; }
+        #calculator .wrapper .cal-container form p {
+          font-weight: 650;
+          margin: 0;
+          line-height: 1.7;
+          font-size: 0.9em;
+          color: #1C2E3F;
+          margin-bottom: 5px; }
+        #calculator .wrapper .cal-container form select {
+          margin-bottom: 20px;
+          border: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          -o-appearance: none;
+          height: 50px;
+          border-radius: 5px;
+          padding: 15px;
+          background-color: white;
+          font-size: 15px; }
+          #calculator .wrapper .cal-container form select option {
+            border: 0;
+            outline: 0; }
+        #calculator .wrapper .cal-container form select:hover {
+          cursor: pointer; }
+        #calculator .wrapper .cal-container form select:active {
+          outline: none; }
+        #calculator .wrapper .cal-container form select:focus {
+          outline: none; }
+        #calculator .wrapper .cal-container form input {
+          height: 20px;
+          border-radius: 5px;
+          padding: 15px;
+          background-color: white;
+          font-size: 15px;
+          border: none; }
+        #calculator .wrapper .cal-container form input:focus {
+          outline: none; }
+
+#testimonials {
+  width: 100%;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+  height: 600px; }
+  #testimonials .white {
+    background-color: white;
+    height: 200px;
+    position: relative; }
+  #testimonials .blue {
+    background-color: #1E3953;
+    height: 300px; }
+  #testimonials .wrapper {
+    width: 98%; }
+    #testimonials .wrapper .t-container {
+      position: relative; }
+
+#news {
+  height: 600px;
+  margin-top: 50vh;
+  font-family: "Ubuntu", Helvetica, Arial, sans-serif; }
+  #news .wrapper {
+    width: 98%; }
+    #news .wrapper .news-title {
+      font-size: 45px;
+      text-align: center;
+      font-weight: 600; }
+    #news .wrapper .news-container {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+      #news .wrapper .news-container .box {
+        width: 250px;
+        height: 300px; }
+        #news .wrapper .news-container .box img {
+          height: 180px;
+          width: 250px; }
+        #news .wrapper .news-container .box .headline {
+          margin: 0 10px;
+          font-weight: 700;
+          font-size: 18px;
+          letter-spacing: 0.7px;
+          line-height: 1.5rem; }
 
 @media (max-width: 1100px) {
   .wrapper {

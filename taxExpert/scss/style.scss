@@ -5,6 +5,7 @@ body{
 .wrapper{
     max-width: 1280px;
     margin: auto;
+    width: 98%;
 
 }
 
@@ -24,7 +25,6 @@ header{
 
     .wrapper{
         display: flex;
-        width: 98%;
         justify-content: space-between;
 
         .details{
@@ -85,23 +85,23 @@ nav{
     text-transform: uppercase;
     font: 500 14px "Ubuntu", Helvetica, Arial, sans-serif;
     letter-spacing: .02em;
-    position: fixed;
     overflow: hidden;
     width: 100%;
     background: white;
     top: 0;
     border-bottom: 1px solid #BDBDBD;
+    margin: auto;
 
     
     .wrapper{
-        width: 98%;
         display: flex;
         justify-content: flex-end;
+
 
         a{
             display: inline;
             width: 100px;
-            margin:0;
+            margin: auto 0;
             padding: 0;
             transition: .3s ease-in-out;
             
@@ -247,7 +247,7 @@ nav{
     }
 }
 #services{
-    margin-top: 7vh;
+    margin-top: 50px;
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     text-align: center;
     
@@ -329,26 +329,32 @@ nav{
     }
 }
 #about{
-    height: 70vh;
+    height: 800px;
     font-family: "Ubuntu", Helvetica, Arial, sans-serif;
     background: url(../assets/counts.jpg) no-repeat; 
     background-size: cover;
     color: #FFFFFF;
     display: flex;
-    justify-content: space-between;
 
     .wrapper{
         width: 98%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
     
         .about-us{
             background-color: #1E3953;
-            width: 30%;
+            width: 300px;
             padding: 0.5% 5% 5% 4%;
-            -webkit-box-shadow: -5px -1px 5px 5px rgba(0,0,0,0.1);
-            -moz-box-shadow: -5px -1px 5px 5px rgba(0,0,0,0.1);
-            box-shadow: -5px -1px 5px 5px rgba(0,0,0,0.1);    
-            margin-top: 5em;
+            -webkit-box-shadow: 3px -1px 5px 5px rgba(0,0,0,0.1);
+            -moz-box-shadow: 3px -1px 5px 5px rgba(0,0,0,0.1);
+            box-shadow: 3px -1px 5px 5px rgba(0,0,0,0.1);    
+            margin: auto 0;
+            display: flex;
             margin-left: auto;
+            flex-direction: column;
+            margin-right: 0;
+            z-index: 1;
 
             .a-title{
                 font-size: 45px;
@@ -373,7 +379,7 @@ nav{
             }
             button{
                 text-transform: uppercase;
-                padding: 15px 30px;
+                padding: 20px 20px;
                 font-family: "Ubuntu", Helvetica, Arial, sans-serif;
                 letter-spacing: 0.05em;
                 font-size: 14px;
@@ -385,6 +391,7 @@ nav{
                 border-color: #fff;
                 margin-top: 5%;
                 transition: .3s ease-out;
+                width: 240px;
             }
             button:hover{
                 background-color: #8BC03F;
@@ -394,26 +401,207 @@ nav{
         }
         .counts{
             background-color: #1E3953;
+            margin: auto 0;
             display: flex;
-            width: 10%;
+            width: 200px;
             margin-right:auto;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            z-index: 0;
+            justify-content: flex-end;
 
             .num-box{
-                display: flex;
-                flex-direction: column;
+                height: 200px;
+                margin: 0;
+                border-bottom: 1px solid #1C2E3F;
 
                 .number{
-                    font-size: 50px;
+                    font-size: 45px;
                     font-weight: 800;
+                    margin-bottom: 0;
                 }
                 .details{
                     color: #486889;
+                    font-size: 14px;
+                    font-weight: 800;
+                    margin-top: 0;
+                }
+            }
+            .num-box:nth-child(3){
+                border-bottom: none;
+            }
+        }
+    }
+}
+#calculator{
+    background: url(../assets/calculator.jpg);
+    background-size: cover;
+    height: 500px;
+    padding: 100px;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+
+    .wrapper{
+        width: 98%;
+
+        .title{
+            font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+            margin: 40px;
+            margin-left: 0;
+            font-size: 50px;
+            font-weight: 700;
+
+            i{
+                color: white;
+            }
+        }
+
+        .cal-container{
+            display: flex;
+            flex-direction: row;
+
+
+            form{
+                display: flex;
+                flex-direction: row;
+                width: auto;
+                
+                .left{
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    width: 220px;
+                    margin-right: 50px;
+
+                    input{
+                        border-bottom: 3px solid #8BC03F;
+                    }
+                }
+
+                .right{
+                    display: flex;
+                    flex-direction: column;
+                    width: 220px;
+                    flex-direction: column;
+                    color: #1C2E3F;
+                }                 
+                p{
+                    font-weight: 650;
+                    margin: 0;
+                    line-height: 1.7;
+                    font-size: 0.9em;
+                    color: #1C2E3F;
+                    margin-bottom: 5px;
+                }
+                select{
+                        margin-bottom: 20px;
+                        border: none;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        -o-appearance: none;
+                        height: 50px;
+                        border-radius: 5px;
+                        padding: 15px;
+                        background-color: white;
+                        font-size: 15px;
+                        
+                        option{
+                            border: 0;
+                            outline: 0;
+                        }
+                }
+                select:hover{
+                    cursor: pointer;
+                }
+                select:active{
+                    outline: none;
+                }
+                select:focus{
+                    outline: none;
+                }
+                input{
+                        height: 20px;
+                        border-radius: 5px;
+                        padding: 15px;
+                        background-color: white;
+                        font-size: 15px;
+                        border: none
+                }
+                input:focus{
+                    outline: none;
+                }
+            }
+        }
+    }        
+}
+#testimonials{
+    width: 100%;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    height: 600px; 
+
+    .white{
+        background-color: white;
+        height: 200px;
+        position: relative;
+
+    }
+    .blue{
+            background-color: #1E3953;
+            height: 300px;
+    }
+
+    .wrapper{
+        width: 98%;
+
+        .t-container{ 
+            position: relative;
+
+            .test{
+
+            }
+        }
+    }
+
+}
+#news{
+    height: 600px;
+    margin-top: 50vh;
+    font-family: "Ubuntu", Helvetica, Arial, sans-serif;
+    
+    .wrapper{
+        width: 98%;
+
+        .news-title{
+            font-size: 45px;
+            text-align: center;
+            font-weight: 600;
+        }
+        .news-container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .box{
+                width: 250px;
+                height: 300px;
+
+                img{
+                    height: 180px;
+                    width: 250px;
+                }
+                .headline{
+                    margin: 0 10px;
+                    font-weight: 700;
+                    font-size: 18px;
+                    letter-spacing: 0.7px;
+                    line-height: 1.5rem;
+
                 }
             }
         }
     }
 }
-
 
 @media(max-width: 1100px){
     .wrapper{
